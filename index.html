@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#050506">
+  <title>Unleash the Beast | Kernel Logic</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="glow"></div>
+  <canvas id="scene"></canvas>
+
+  <div id="ui">
+    <div class="top">
+      <header class="bar">
+        <div class="logo">KERNEL<span>LOGIC</span></div>
+        <button id="sound" class="chip" type="button" aria-pressed="false">SOUND OFF</button>
+      </header>
+      <section class="hero">
+        <p class="eyebrow">M5 COMPETITION</p>
+        <h1>UNLEASH<br>THE BEAST.</h1>
+        <ul class="specs" aria-label="Specs">
+          <li><strong>625</strong><span>PS</span></li>
+          <li><strong>750</strong><span>NM</span></li>
+          <li><strong>3.3</strong><span>0-100 S</span></li>
+        </ul>
+        <p class="sub">Pick a paint. Rev it. Tap WHERE TO? and let it drive you there.</p>
+      </section>
+    </div>
+
+    <footer class="controls">
+      <p class="hint">DRAG TO ROTATE</p>
+      <div class="paint">
+        <span class="label">CHOOSE YOUR PAINT</span>
+        <div id="swatches"></div>
+      </div>
+      <div class="buttons">
+        <button id="rev" class="btn ghost" type="button">REV ENGINE</button>
+        <button id="where" class="btn primary" type="button">WHERE TO? &#8599;</button>
+      </div>
+    </footer>
+  </div>
+
+  <div id="menu" class="menu" aria-hidden="true">
+    <div class="sheet" role="dialog" aria-label="Choose your destination">
+      <div class="sheet-head">
+        <h2>WHERE TO?</h2>
+        <button id="menu-close" class="chip" type="button">CLOSE</button>
+      </div>
+      <p class="sheet-sub">Choose your destination.</p>
+      <div id="menu-list"></div>
+    </div>
+  </div>
+
+  <div id="loader"><p id="loader-text">LOADING CAR...</p></div>
+
+  <div id="curtain"><p id="curtain-text"></p></div>
+  <div id="error" role="alert"></div>
+  <noscript><p style="padding:24px;color:#fff">Please enable JavaScript to view this site.</p></noscript>
+
+  <!-- Three.js r128 + model loaders (same version) -->
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/DRACOLoader.js"></script>
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
